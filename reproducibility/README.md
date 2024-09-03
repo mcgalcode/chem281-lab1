@@ -82,6 +82,16 @@ The following tips will be helpful:
 - When you invoke jupyter inside the container, you may need the flags: "--ip=0.0.0.0", "--allow-root", and "--no-browser"
 - When you use `docker run` to run your container, you'll want to use `-p xxx:yyy` where yyy is the port inside the container and xxx is the port on the host machine to which it should map
 
+### Register your container on Docker Hub
+
+How can you make the work you've done available to others? Docker Hub provides a centralized repository of images which anyone can pull for their own use. Though there are other ways to distribute your own images, this is probably the most straightforward. Try to create an account on Docker Hub, upload the image you've produced, and have someone else in your group pull it and run it. They should be able to visualize the results of your simulation by running the correct `docker run` command!
+
+Keep in mind:
+
+- You'll need to create a Repository before you can push
+- Choose a recognizable name for your image
+- Go ahead and delete your image and repository after someone else has successfully run it on their machine (though of course this would be antithetical to the reproducibility goal of this lab if it weren't a toy problem...)
+
 ### Gotchas
 
 1. `git clone` does not "know" if the contents of the remote have changed since the last image build. You will
