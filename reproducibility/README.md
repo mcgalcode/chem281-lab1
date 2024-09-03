@@ -63,9 +63,9 @@ You are ready to move on to creating your Dockerfile!
 
 Fill in the `Dockerfile` to create an image that allows others to reproduce your science!
 
-1. Using the Dockerfile stub, create a container that uses the python 3.12 image
+1. Choose the python 3.12.5 image as the base o,age
 2. **Add dependency**
-Add a line that installs the lennard_jones_md package from github by cloning the repository, and checking out the code at commit XXXX. We want to check out a specific commit because we are trying to create an image that fossilizes exactly the environment used to produce simulation results. If this was a package that was under active development the latest version may be incompatible with your use of it (e.g. due to changes in the input format).
+Add a line that installs the lennard_jones_md package from github by cloning the repository, and checking out the code at commit 8832a79. We want to check out a specific commit because we are trying to create an image that fossilizes exactly the environment used to produce simulation results. If this was a package that was under active development the latest version may be incompatible with your use of it (e.g. due to changes in the input format).
 3. **Add source code**: Make sure to include `run_simulation.py` in your docker image.
 4. **Add inputs to docker image**: Add your completed `inputs.json` file to the docker image.
 5. **Run your simulation** Invoke the `run_simulation.py` script to ensure that the outputs are produced and included correctly in the container environment.
