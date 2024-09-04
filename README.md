@@ -16,6 +16,13 @@ In particular, we are going to illustrate how three pieces of your working envir
 2. The version of your own source code
 3. Input data for your simulation
 
+## Prerequisites
+
+1. A local python installation
+2. A local docker installation
+3. This repository, cloned
+4. The toy Lennard-Jones MD code, cloned: https://github.com/mcgalcode/lennard-jones-md
+
 ## Setting the scene
 
 You are a computational chemist who has recently produced an exciting (!!) result using a barebones one-dimenionsal Lennard-Jones molecular dynamics simulation. You want to publish this result, and you want to ensure that others can reproduce your result exactly. To do this you plan to use docker to precisely define the computing environment that produces the results of your simulation.
