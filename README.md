@@ -98,7 +98,3 @@ Keep in mind:
 - You'll need to create a Repository before you can push
 - Choose a recognizable name for your repository
 - Feel free to delete your image and repository after someone else has successfully run it on their machine (though of course this would be antithetical to the reproducibility goal of this lab if it weren't a toy problem...)
-
-### Gotchas
-
-1. `git clone` does not "know" if the contents of the remote have changed since the last image build. You will
