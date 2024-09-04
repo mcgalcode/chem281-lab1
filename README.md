@@ -72,16 +72,16 @@ Fill in the `Dockerfile` to create an image that allows others to reproduce your
 
 1. Choose the python 3.12.5 image as the base image
 2. **Add dependency**
-Add a line that installs the lennard_jones_md package from github by cloning the repository, and checking out the code at commit 8832a79. We want to check out a specific commit because we are trying to create an image that fossilizes exactly the environment used to produce simulation results. If this was a package that was under active development the latest version may be incompatible with your use of it (e.g. due to changes in the input format).
+Add a line that installs the lennard_jones_md package from github by cloning the repository, and checking out the code at commit 8832a79. We want to check out a specific commit because we are trying to create an image that fossilizes exactly the environment used to produce simulation results. If this was a package that was under active development the latest version may be incompatible with your use of it (this is exactly the case here).
 3. **Add source code**: Make sure to include `run_simulation.py` in your docker image.
 4. **Add inputs to docker image**: Add your completed `inputs.json` file to the docker image.
 5. **Run your simulation** Invoke the `run_simulation.py` script to ensure that the outputs are produced and included correctly in the container environment.
 
-Once you have finished these steps, run a container using this image and confirm that the `sim_outputs.json` file is included as expected.
+Once you have finished these steps, run a container interactively using this image and confirm that the `sim_outputs.json` file is included as expected.
 
-#### Bonus: Jupyter Lab for visualization
+### Jupyter Lab for visualization
 
-To make it easier for other researchers to view your results in the docker container environment, let's try to run jupyter from inside the container. You'll need to install the python `jupyterlab` package (along with `matplotlib`, a dependency of `visualize_output.ipynb`), then use a `CMD` line to define the jupyter lab invocation. Finally, in order to make a network port (jupyter typically runs on localhost:8888) in the container available on the host, you'll need to change your `docker run` invocation to include the `-p` flag, which maps a port on the host to a port inside the container.
+To make it easier for other researchers to view your results in the docker container environment, let's try to run jupyter from inside the container. You'll need to install the python `jupyterlab` package (along with `matplotlib`, a dependency of `visualize_output.ipynb`), then use a `CMD` line to define the jupyter lab invocation. Finally, in order to make a network port (jupyter typically runs on localhost:8888) in the container available on the host, you'll need to construct a `docker run` invocation that includes the `-p` flag, which maps a port on the host to a port inside the container.
 
 The following tips will be helpful:
 
@@ -96,8 +96,8 @@ How can you make the work you've done available to others? Docker Hub provides a
 Keep in mind:
 
 - You'll need to create a Repository before you can push
-- Choose a recognizable name for your image
-- Go ahead and delete your image and repository after someone else has successfully run it on their machine (though of course this would be antithetical to the reproducibility goal of this lab if it weren't a toy problem...)
+- Choose a recognizable name for your repository
+- Feel free to delete your image and repository after someone else has successfully run it on their machine (though of course this would be antithetical to the reproducibility goal of this lab if it weren't a toy problem...)
 
 ### Gotchas
 
