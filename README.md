@@ -50,6 +50,12 @@ Before trying to create this docker image, it may be helpful to make sure you ca
     - Selecting a simulation temperature (a positive integer)
     - Generating a set of initial random velocities. To make these velocities, use a python REPL and invoke the `LennardJonesMolecularDynamics.initialize_velocities()` method using the temperature you selected and `3` for the number of particles.
 
+    For example, if you selected a temperature of 300K, this invocation would look like:
+
+```
+>>> LennardJonesMolecularDynamics.initialize_velocities(300, 3)
+```
+
 You can invoke the `run_simulation.py` script using
 
 ```
