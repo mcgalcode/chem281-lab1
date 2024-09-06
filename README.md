@@ -54,6 +54,20 @@ Before trying to create this docker image, it may be helpful to make sure you ca
 
 ```
 >>> LennardJonesMolecularDynamics.initialize_velocities(300, 3)
+[-0.006447150553782612, 0.006493206418314661, 0.007389541374759519]
+```
+
+After adding this to `inputs.json`, the file will look like this:
+
+```
+{
+    "equilbrium_r": 3,
+    "timestep_size": 0.1,
+    "num_simulation_steps": 10000,
+    "temperature": 300,
+    "initial_x": [0, 3.1, 6.2],
+    "initial_velocities": [-0.006447150553782612, 0.006493206418314661, 0.007389541374759519]
+}
 ```
 
 You can invoke the `run_simulation.py` script using
