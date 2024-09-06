@@ -31,3 +31,5 @@ serializable_result = simulation_result.tolist()
 # Serialize the results
 with open("sim_output.json", "w+") as f:
     json.dump(serializable_result, f)
+
+print("Simulation ran successfully!")
