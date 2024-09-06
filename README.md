@@ -46,6 +46,15 @@ Finally, to make it particularly easy for others to view your results, you want 
 Before trying to create this docker image, it may be helpful to make sure you can get the `run_simulation.py` script running locally. To do this you'll need to:
 
 1. Install the [lennard_jones_md](https://github.com/mcgalcode/lennard-jones-md) package locally (perhaps in a virtualenv or a conda environment) **remember to checkout the last working commit: 8832a79**.
+
+To check out that version of the code, navigate into the repo after you clone it, and run:
+
+```
+git checkout 8832a79
+```
+
+This command causes us to revert to a previous version of the code (i.e. the one that we know works for our simulation).
+
 2. Fill out the `inputs.json` file. This will involve at a minimum
     - Selecting a simulation temperature (a positive integer)
     - Generating a set of initial random velocities. To make these velocities, use a python REPL and invoke the `LennardJonesMolecularDynamics.initialize_velocities()` method using the temperature you selected and `3` for the number of particles.
